@@ -35,7 +35,11 @@
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Cdm-yH-kOj"/>
-                                    <barButtonItem image="ic_note_add.png" id="fmw-vN-pfQ"/>
+                                    <barButtonItem image="ic_note_add.png" id="fmw-vN-pfQ">
+                                        <connections>
+                                            <segue destination="ORQ-CL-uuc" kind="show" id="psc-uA-z6b"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IMG_9900.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-e3-8Th">
@@ -65,16 +69,71 @@
                     <view key="view" contentMode="scaleToFill" id="eOs-bF-Nbk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tQy-4b-1gg">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Add New Uesr" id="shJ-Mp-PkS">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_keyboard_arrow_left.png" id="ng6-5T-K1j">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="xim-cd-wp3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEL-hV-LAC">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="EJQ-aa-W9b"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Ldf-6d-rsC"/>
+                                    <barButtonItem title="Save New User to Sever" id="88w-7D-A02"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="HMA-1x-rs4"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Rlv-rD-kyG"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xLN-Lz-bhy"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ofd-Mi-lrU"/>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJu-w9-Qle">
+                                <rect key="frame" x="36" y="123" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGJ-U6-5Vh">
+                                <rect key="frame" x="36" y="187" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktv-mL-Sd8">
+                                <rect key="frame" x="36" y="247" width="303" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FP-ZK-pwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-415" y="-189"/>
+            <point key="canvasLocation" x="-378.39999999999998" y="-189.3553223388306"/>
         </scene>
     </scenes>
     <resources>
         <image name="IMG_9900.jpg" width="1000" height="667"/>
+        <image name="ic_keyboard_arrow_left.png" width="24" height="24"/>
         <image name="ic_note_add.png" width="24" height="24"/>
     </resources>
 </document>
