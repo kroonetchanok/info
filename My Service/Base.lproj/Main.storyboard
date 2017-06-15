@@ -91,7 +91,11 @@
                                 <items>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="EJQ-aa-W9b"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Ldf-6d-rsC"/>
-                                    <barButtonItem title="Save New User to Sever" id="88w-7D-A02"/>
+                                    <barButtonItem title="Save New User to Sever" id="88w-7D-A02">
+                                        <connections>
+                                            <action selector="saveButton:" destination="ORQ-CL-uuc" id="qqy-Ha-XYK"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="HMA-1x-rs4"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Rlv-rD-kyG"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="xLN-Lz-bhy"/>
@@ -125,6 +129,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="QJu-w9-Qle" id="gKn-00-Ael"/>
+                        <outlet property="passwordTextField" destination="Ktv-mL-Sd8" id="35X-Ws-xBU"/>
+                        <outlet property="userTextField" destination="mGJ-U6-5Vh" id="68z-iv-LnS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FP-ZK-pwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
