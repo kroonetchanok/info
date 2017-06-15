@@ -12,6 +12,11 @@
 		FB7964F31EF25CF90047152B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7964F11EF25CF90047152B /* Main.storyboard */; };
 		FB7964F51EF25CF90047152B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7964F41EF25CF90047152B /* Assets.xcassets */; };
 		FB7964F81EF25CF90047152B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7964F61EF25CF90047152B /* LaunchScreen.storyboard */; };
+		FB7965001EF27DFE0047152B /* AddNewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7964FF1EF27DFE0047152B /* AddNewUserViewController.swift */; };
+		FB7965021EF281E10047152B /* IMG_9900.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FB7965011EF281E10047152B /* IMG_9900.jpg */; };
+		FB7965061EF285910047152B /* ic_note_add_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7965031EF285910047152B /* ic_note_add_2x.png */; };
+		FB7965071EF285910047152B /* ic_note_add_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7965041EF285910047152B /* ic_note_add_3x.png */; };
+		FB7965081EF285910047152B /* ic_note_add.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7965051EF285910047152B /* ic_note_add.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		FB7964F41EF25CF90047152B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7964F71EF25CF90047152B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB7964F91EF25CF90047152B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB7964FF1EF27DFE0047152B /* AddNewUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewUserViewController.swift; sourceTree = "<group>"; };
+		FB7965011EF281E10047152B /* IMG_9900.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_9900.jpg; path = ../../../../Desktop/IMG_9900.jpg; sourceTree = "<group>"; };
+		FB7965031EF285910047152B /* ic_note_add_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_note_add_2x.png; path = ../../../../Desktop/ic_note_add_2x.png; sourceTree = "<group>"; };
+		FB7965041EF285910047152B /* ic_note_add_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_note_add_3x.png; path = ../../../../Desktop/ic_note_add_3x.png; sourceTree = "<group>"; };
+		FB7965051EF285910047152B /* ic_note_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_note_add.png; path = ../../../../Desktop/ic_note_add.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,11 @@
 			children = (
 				FB7964ED1EF25CF90047152B /* AppDelegate.swift */,
 				FB7964EF1EF25CF90047152B /* ViewController.swift */,
+				FB7965011EF281E10047152B /* IMG_9900.jpg */,
+				FB7965031EF285910047152B /* ic_note_add_2x.png */,
+				FB7965041EF285910047152B /* ic_note_add_3x.png */,
+				FB7965051EF285910047152B /* ic_note_add.png */,
+				FB7964FF1EF27DFE0047152B /* AddNewUserViewController.swift */,
 				FB7964F11EF25CF90047152B /* Main.storyboard */,
 				FB7964F41EF25CF90047152B /* Assets.xcassets */,
 				FB7964F61EF25CF90047152B /* LaunchScreen.storyboard */,
@@ -123,7 +138,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7965081EF285910047152B /* ic_note_add.png in Resources */,
 				FB7964F81EF25CF90047152B /* LaunchScreen.storyboard in Resources */,
+				FB7965061EF285910047152B /* ic_note_add_2x.png in Resources */,
+				FB7965071EF285910047152B /* ic_note_add_3x.png in Resources */,
+				FB7965021EF281E10047152B /* IMG_9900.jpg in Resources */,
 				FB7964F51EF25CF90047152B /* Assets.xcassets in Resources */,
 				FB7964F31EF25CF90047152B /* Main.storyboard in Resources */,
 			);
@@ -137,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7964F01EF25CF90047152B /* ViewController.swift in Sources */,
+				FB7965001EF27DFE0047152B /* AddNewUserViewController.swift in Sources */,
 				FB7964EE1EF25CF90047152B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
