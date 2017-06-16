@@ -1,21 +1,59 @@
-//
+///
+//  ViewController.swift
+///
 //  ViewController.swift
 //  My Service
 //
 //  Created by Teacher on 6/15/2560 BE.
 //  Copyright © 2560 SNRU. All rights reserved.
 //
-
 import UIKit
 
 class ViewController: UIViewController {
     
-    
-    // Explicit
+    //Explicit
     var myString = ""
+    var strUser: String? = nil
+    var strPassword: String? = nil
+    var strMyJSON = ""
     
     
     
+    
+    
+    
+    
+    
+    @IBOutlet weak var userTextField: UITextField!
+    
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
+    @IBOutlet weak var alertLabel: UILabel!
+    
+    
+    @IBAction func loginButton(_ sender: Any) {
+        
+        //Get Value From TextField
+        strUser = userTextField.text
+        strPassword = passwordTextField.text
+        
+        //Check Space
+        if strUser?.characters.count == 0 || strPassword?.characters.count == 0 {
+            alertLabel.alpha = 1
+        }   else {
+            
+            alertLabel.alpha = 0
+            let strUrl = "http://androidthai.in.th/snru/getUserWhereMaster.php?isAdd=true&User=" + strUser! + ""
+            print("strUrl ==> \(strUrl)")
+            readJSON(strURL: strUrl)
+            
+        } // if
+        
+        
+        
+    }   // loginButton
     
     
     
@@ -23,8 +61,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }   // Main Method
+    
+    func readJSON(strURL: String) -> Void {
+        
         //Process Connected Http
-        let urlPHP = "http://swiftcodingthai.com"
+        let urlPHP = strURL
         //Change String to url String
         let myURL = URL(string: urlPHP)
         
@@ -33,7 +75,7 @@ class ViewController: UIViewController {
             data, response, error in
             
             if error != nil {
-                print("Error ==> \(error)")
+                print("Error ==> \(String(describing: error))")
             }   else {
                 
                 if let unwrappedData = data {
@@ -41,6 +83,50 @@ class ViewController: UIViewController {
                     let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
                     let strJSON = dataString as Any
                     print("strJSON ==> \(strJSON)")
+                    
+//                    if strJSON != nil {
+//                    print("dataString not nil")
+//                    } else {
+//                        print("dataString nil")
+//                    
+//                    }
+        
+            
+                    
+                    
+                    
+                    
+                    
+                    let strKey = ","
+                    if let myContentArray = dataString?.components(separatedBy: strKey) {
+                        
+                        print("myContentArray[2] ==> \(myContentArray[2])")
+                        print("myContentArray[3] ==> \(myContentArray[3])")
+                        
+                        
+                        // Cheack Password
+                        
+                        
+                        let myPassword = "\"Password\":\"" + self.strPassword! + "\"}]"
+                        if myPassword == myContentArray[3] {
+                            //Password True
+                            print("Password True")
+                        }   else {
+                            //Password False
+                            print("Password False")
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    }   // if
+                    
+                    
                     
                 }
                 
@@ -51,16 +137,13 @@ class ViewController: UIViewController {
         
         
         
-        
-        
-        
-        
-    }   // Main Method
+    }   // readJSON
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }   // didReceive
-    
     
 }   // Main Class
