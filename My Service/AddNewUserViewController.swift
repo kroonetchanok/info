@@ -51,21 +51,20 @@ class AddNewUserViewController: UIViewController {
             AlertLabel.alpha = 1
             
         } else {
+            
+            
             print("No Space")
             AlertLabel.alpha = 0
-        
-        
+            let strMyURL = "http://androidthai.in.th/snru/addUserMaster.php?isAdd=true&Name=" + nameString! + "&User=" + userString! + "&Password=" + passwordString! + ""
+            print("strMyURL ==> \(strMyURL)")
+            uploadValueToServer(strURL: strMyURL)
+            
         
         }
-        
         
 
         
     }// saveBotton
-    
-    
-    
-    
     
     
     
@@ -78,6 +77,42 @@ class AddNewUserViewController: UIViewController {
         
         
     } // Main Method
+    func uploadValueToServer(strURL: String) -> Void {
+        
+        //Process Connected Http
+        let urlPHP = strURL
+        //Change String to url String
+        let myURL = URL(string: urlPHP)
+        
+        let request1 = NSMutableURLRequest(url: myURL!)
+        let task = URLSession.shared.dataTask(with: request1 as URLRequest){
+            data, response, error in
+            
+            if error != nil {
+                print("Error ==> \(error)")
+            }   else {
+                
+                if let unwrappedData = data {
+                    
+                    let dataString = NSString(data: unwrappedData, encoding: String.Encoding.utf8.rawValue)
+                    let strJSON = dataString as Any
+                    print("strJSON ==> \(strJSON)")
+                    
+                }
+                
+            }   // if1
+            
+        }
+        task.resume()
+        
+        
+        
+    }
+    
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
