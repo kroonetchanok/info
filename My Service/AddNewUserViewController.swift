@@ -29,6 +29,7 @@ class AddNewUserViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
+    @IBOutlet weak var AlertLabel: UILabel!
     
     @IBAction func saveButton(_ sender: Any) {
         
@@ -47,9 +48,11 @@ class AddNewUserViewController: UIViewController {
             
             //Have Space
             print("Have Space")
+            AlertLabel.alpha = 1
+            
         } else {
             print("No Space")
-            
+            AlertLabel.alpha = 0
         
         
         

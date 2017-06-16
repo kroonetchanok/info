@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -42,21 +43,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IMG_9900.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-e3-8Th">
-                                <rect key="frame" x="-313" y="28" width="1000" height="647"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="4Hl-e3-8Th" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0J3-9Z-LUI"/>
-                            <constraint firstItem="4Hl-e3-8Th" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lGd-p6-pPd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4Hl-e3-8Th" secondAttribute="bottom" id="mfk-I3-FJ1"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1073" y="-189"/>
+            <point key="canvasLocation" x="-1158" y="-225"/>
         </scene>
         <!--AddNewUser-->
         <scene sceneID="Nfy-bg-MG4">
@@ -126,10 +119,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX4-pa-hjS">
+                                <rect key="frame" x="89" y="321" width="197" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nX4-pa-hjS" secondAttribute="trailing" constant="73" id="1h5-OI-u2T"/>
+                            <constraint firstItem="nX4-pa-hjS" firstAttribute="centerX" secondItem="eOs-bF-Nbk" secondAttribute="centerX" id="AeO-QD-q5r"/>
+                            <constraint firstItem="nX4-pa-hjS" firstAttribute="leading" secondItem="eOs-bF-Nbk" secondAttribute="leadingMargin" constant="73" id="DYb-M3-nPt"/>
+                            <constraint firstItem="nX4-pa-hjS" firstAttribute="centerX" secondItem="eOs-bF-Nbk" secondAttribute="centerX" id="V3X-YH-fl6"/>
+                            <constraint firstItem="nX4-pa-hjS" firstAttribute="centerY" secondItem="eOs-bF-Nbk" secondAttribute="centerY" id="vOb-fj-7La"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="AlertLabel" destination="nX4-pa-hjS" id="7SH-d0-ucx"/>
                         <outlet property="nameTextField" destination="QJu-w9-Qle" id="gKn-00-Ael"/>
                         <outlet property="passwordTextField" destination="Ktv-mL-Sd8" id="35X-Ws-xBU"/>
                         <outlet property="userTextField" destination="mGJ-U6-5Vh" id="68z-iv-LnS"/>
@@ -137,11 +144,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FP-ZK-pwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-378.39999999999998" y="-189.3553223388306"/>
+            <point key="canvasLocation" x="-503.19999999999999" y="-225.33733133433284"/>
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_9900.jpg" width="1000" height="667"/>
         <image name="ic_keyboard_arrow_left.png" width="24" height="24"/>
         <image name="ic_note_add.png" width="24" height="24"/>
     </resources>
