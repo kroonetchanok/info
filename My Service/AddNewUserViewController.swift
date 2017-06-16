@@ -105,6 +105,26 @@ class AddNewUserViewController: UIViewController {
         }
         task.resume()
         
+        performSegue(withIdentifier: "BackHome", sender: self)
+        
+    
+        
+    } // uploadValur
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goHome" {
+            
+            if let desination = segue.destination as? ViewController {
+          desination.myString = (sender as? String)!
+            
+            }
+        }  // if
+    
+    
+        }
+        
+        
         
         
     }
@@ -114,11 +134,11 @@ class AddNewUserViewController: UIViewController {
     
     
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+  //  override func didReceiveMemoryWarning() {
+  //      super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    } //didRective
+  //  } //didRective
     
 
 
-} //main Class
+//} //main Class
